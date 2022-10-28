@@ -1,4 +1,4 @@
-package FelinesTest;
+package felinestest;
 
 import com.example.Feline;
 import org.junit.Assert;

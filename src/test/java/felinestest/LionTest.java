@@ -1,4 +1,4 @@
-package FelinesTest;
+package felinestest;
 
 import com.example.Feline;
 import com.example.Lion;
@@ -23,15 +23,17 @@ public class LionTest {
         Lion lion = new Lion(feline);
         Assert.assertEquals("Количество котят не соответствует ожидаемому",1,lion.getKittens());
     }
-    @Mock
-    Feline feline1;
     @Test
     public void checkWhatLionEats() throws Exception {
-        Lion lion = new Lion(feline1);
+        Lion lion = new Lion(feline);
         List<String> whatLionEat= Arrays.asList("Животные","Птицы", "Рыба");
-        Mockito.when(feline1.getFood("Хищник")).thenReturn(whatLionEat);
+        Mockito.when(feline.getFood("Хищник")).thenReturn(whatLionEat);
         Assert.assertEquals("Неверный рацион льва",whatLionEat,lion.getFood());
     }
 
+    @Test(expected = Exception.class)
+    public void checkIsLionHasManeException() throws Exception {
+        Lion lion = new Lion("Небинарная личность");
+    }
 
 }

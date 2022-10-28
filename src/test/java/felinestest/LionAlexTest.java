@@ -1,4 +1,4 @@
-package FelinesTest;
+package felinestest;
 
 import com.example.Lion;
 import com.example.LionAlex;

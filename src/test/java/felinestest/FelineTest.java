@@ -1,4 +1,4 @@
-package FelinesTest;
+package felinestest;
 
 import com.example.Animal;
 import com.example.Feline;
@@ -25,15 +25,6 @@ public class FelineTest {
         Assert.assertEquals("У кошачьих другой рацион", List.of("Животные", "Птицы", "Рыба"),feline.eatMeat());
     }
 
-
-//    @Mock
-//    Feline feline;
-//    @Test
-//    public void checkFelineEatMeatIsCalled() throws Exception {
-//        //Feline feline = new Feline(animal);
-//        feline.eatMeat();
-//        Mockito.verify(feline,Mockito.times(1)).eatMeat();
-//    }
 
     @Test
     public void checkFelineGetFamily(){

@@ -1,4 +1,4 @@
-package FelinesTest;
+package felinestest;
 
 import com.example.Cat;
 import com.example.Feline;
@@ -15,15 +15,16 @@ import java.util.List;
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
 
+    @Mock
+    Feline feline;
+    @Mock
+    Feline predator;
     @Test
     public void checkCatGetSound() {
-        Cat cat = new Cat(new Feline());
+        Cat cat = new Cat(feline);
         String catSound = cat.getSound();
         Assert.assertEquals("Кошка говорит неверно", "Мяу", catSound);
     }
-
-    @Mock
-    Feline predator;
 
     @Test
     public void checkCatGetFood() throws Exception {

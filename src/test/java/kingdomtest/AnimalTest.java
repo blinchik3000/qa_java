@@ -1,4 +1,4 @@
-package KingdomTest;
+package kingdomtest;
 
 import com.example.Animal;
 import org.junit.Assert;
