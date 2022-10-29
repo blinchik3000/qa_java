@@ -33,7 +33,7 @@ public class LionTest {
 
     @Test(expected = Exception.class)
     public void checkIsLionHasManeException() throws Exception {
-        Lion lion = new Lion("Небинарная личность");
+        Lion lion = new Lion("Небинарная личность",new Feline());
     }
 
 }
